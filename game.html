@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>The Game</title>
+        <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <style>
+            #maze {
+                margin-left: 400px;
+                width: 500px;
+                height: 700px;
+                background-color: "red";
+            }
+            #score {
+                position: relative;
+                display: inline-block; 
+                margin-right: 50px; 
+                margin-left: 300px; 
+                font-family: 'Nosifer', cursive; 
+                color: #FF0000;
+            }
+            #lives {
+                 position: relative;
+                 display: inline-block;
+                 font-family: 'Nosifer', cursive;
+                 color: #FF0000;
+            }
+            #home {
+                position: absolute;
+                font-size: 20pt; 
+                left: 500px; 
+                top: 700px; 
+                height: 50px; 
+                width: 200px;
+            }
+            #blinky
+            {
+                position: absolute;
+                padding-left: 50px; 
+                padding-top: 50px; 
+            }
+            #inky
+            {
+                position: absolute;
+                padding-left: 100px; 
+                padding-top: 300px; 
+            }
+            #winky
+            {
+                position: absolute;
+                padding-left: 1000px; 
+                padding-top: 50px; 
+            }
+            #pinky
+            {
+                position: absolute;
+                padding-left: 900px; 
+                padding-top: 300px; 
+            }
+        </style>        
+    </head>
+    <body style ="background-color: #000000">
+        <div class= "container">
+            <h1 id="score">Score:</h1>
+            <h1 id="lives">Lives: 3</h1>    
+        </div>
+        <div id="blinky">
+            <img src="http://i.imgur.com/P4wTDV4.png"></img>
+        </div>
+        <div id= "inky">
+            <img src="http://i.imgur.com/3p9WOVs.png"></img>
+        </div>
+        <div id="winky">
+            <img src="http://i.imgur.com/AidMcs5.png"></img>
+        </div>
+        <div id="pinky">
+            <img src="http://i.imgur.com/Be44sRS.png"></img>
+        </div>
+        <div id="maze">
+            <div>
+                <a href="pacman_home.html"><button class="btn btn-danger" id="home"> Home </button></a>
+            </div>
+            <script src="js/game_implementation_2.js"></script>
+        </div>
+    </body>
+</html>

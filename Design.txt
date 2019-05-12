@@ -1,0 +1,52 @@
+There are three broad design fields involved in our implementation of Pac-man:
+1) the characters themselves 2) the interactive elements of the game 3) the non-interactive elements of the game/the 
+rest of the website. 
+
+But before we delve into those fields, we should first present the big picture. Our game is run using javascript 
+on an html canvas, with three pages: a home page, a game page, and a page for further information about Pac-man.
+We used a setInterval() function to execute the main game loop every 20 milliseconds, with the result that 
+our game was a series of pictures, redrawn every 20 milliseconds. 
+
+The first design category of our game involves the characters themselves. Pac-man and all the ghosts are javascript 
+objects in our code. Associated with those objects are their x and y coordinates. We used the ctx.drawImage() method
+to draw the character's images in their respective coordinates. Each character was moved by its own move function; we 
+did this for two reasons: so that Pac-man could be controlled by the keyboard while the ghosts moved autonomously, 
+and so that the ghosts could all move according to different patterns. We used the object property pacman.dir to 
+represent pacman's--and the ghosts'--direction (up, down, left, right) with the numbers 1, 2, 3, and 4. In doing so,
+we were able to control the pacman's movements with the arrown keys and thus influence the movements of the ghosts.
+For the ghosts, we attempted two methods of pathfinding: we tried to represent the game board as a 2 dimensional 
+array, and we tried to use nodes. In both of these methods we attempted to implement the A* pathfinding function using
+MIT's gamlib ai library, but unfortunately we failed. We created our own "pathfinding" by comparing the positions
+of the ghosts (notably Blinky) with the current position of Pac-man and then changing the ghost's direction accordingly.
+Pac-man and the ghost's movements were restricted by the maze through collision functions that detected when 
+a character came into contact with a maze wall (hexadecimal #0000FF). We also implemented collision functions to detect
+whether Pac-man was colliding with a ghost.
+
+The second design category included the dynamic elements of the game itself: the pellets, the maze, the poop, and 
+the score/lives. The pellets we printed by iterating through a 2d array, and checking the RGB data for each set of pixels
+where we hoped to place a pellet. If the color of the pixel group where we hoped to place the pellet was blue, we
+did not print the pellet. On the other hand, if the group was black, we printed it. We did this with the intent that
+we could reuse the section of code (for printing pellets) no matter what the maze level looked like. Unfortunately,
+we did not get around to creating more levels. We drew the power pellets using the same method. Next was the maze, which we drew (along with all the other images in 
+the game) using a Mac application called Pixen. The maze was drawn entirely from three colors: blue (hexadecimal
+#0000FF) black (hexadecimal #000000) and brick red (decimal 255, 130, 130). The blue corresponded to the walls, which 
+neither Pac-man nor the ghosts could travel through. The black corresponded to the pathways, which both Pac-man and the 
+ghosts could travel through, and the brick red corresponded to the gates in the central cage, which only the ghosts
+could travel through. The poop is the next interactive element of the game itself, and when Pac-man eats it, it 
+has the effect of allowing Blinky to travel through walls in order to catch Pac-man. Fortunately this is only for 
+a short time (also, this was the first rendition of our "pathfinding" technique, which we found was a bit too
+effective). The last interactive part of the game is the score and lives count. The score is incremented whenever 
+Pac-man eats a pellet or when he eats a power-pellet (this latter also has the effect of turning each ghost
+blue and allowing Pac-man to chase them). We implemented an eatpellet() function that both tracked which pellets 
+Pac-man had come into contact with, and prevented those pellets from being redrawn on the canvas on each interval.
+We used the same function to enable Pac-man to eat the power-pellets. We introduced counter variables to keep track of
+how long we wanted pacman to enter "power mode" (ghosts turn blue and are able to be eaten by pacman) after eating a power pellet (5s), pacman's animation of opening and 
+closing its mouth by alternating between 2 images, and how long we wanted Blinky to be able to go through walls to chase pacman
+after pacman eats the poop (7s). All these variables are updated by looping throught the game function endlessly. 
+
+The third part of our design was the non-interactive elements of the game. The home page we created using a fusion 
+of html, css, and pixen. The lone button on the page allows the user to navigate to the game itself, while the 
+link on the page allows the user to visit a third page of the site wherein he/she can read about Pac-man (or
+potentially visit other sites to read even more). This link we enabled through use of href, and the images (like all
+the other ones in the game) we placed onto the wepage by first drawing them in Pixen, uploading them to 
+http://www.imgur.com, and then using the link from that website to source the images in our code.

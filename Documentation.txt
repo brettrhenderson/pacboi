@@ -1,0 +1,54 @@
+Organization:
+
+     Our project is a web-based implementation of the arcade game Pacman. However, we decided not to pay for
+web hosting, so it is only accessible in our appliance through localhost. All of the contents of our project 
+lie within a folder called Pacman, which is itself be placed within a public folder whithin our appliance's 
+localhost. The pacman folder contains subfolders containing all of our 1.) css, 2.) javascript, 3.) html, 
+and 4.) sound files.
+
+     Within our project's html folder, we have the html for our website's homepage (pacman_home.html), a page
+on which the actual game is played (game.html), and a third page which contains a summary of the development
+of the pacman game (pacman_learn.html). Thus, the entire project can be accessed by going to the url
+http://localhost/pacman/pacman_home.html and then clicking on either the "play" button to view game.html
+or the link "learn more about pacman" to see pacman_learn.html.
+
+
+How to play:
+    
+    The game itself was implemented entirely in javascript, within the file called pacman_implementation_2.js. 
+When you click on the button to "play game" fom the home screen, you will be directed to a new screen, where 
+pushing the start button will cause the javascript to begin running. Once the intro music is done playing, the 
+game will begin, with the ghosts immediately leaving their "holding tank," unlike traditional pacman. So be ready!
+Gameplay itself is fairly simple, and mostly the same as the original pacman. The four arrow keys allow the user 
+to direct pacman through the maze. Initially, pacman is unmoving, so it takes the ht of one of the four arrows to 
+set him in motion. After that, pacman will continue to move in the same direction (even without you holding the 
+key) untilhe hits a wall or you provide him with a new direction.  However, if you direct pacman to turn where 
+there is no path for him to take, he will continue in his original direction. If, however, you hold down any of 
+the four arrow keys to turn, pacman will turn in the specified direction at the first available path. 
+
+           Punishments and Rewards:
+           
+           1.) EAT THE PELLETS! The user will be awarded one point for each regular pellet eaten.  Once all of 
+               the pellets and power pellets have been eaten, you have won.
+           
+           2.) EAT THE POWER PELLETS! The user will receive 5 pellets for each power pellet consumed. In addition,
+               the ghosts will be vulnerable for 5 seconds, allowing pacman to rack up points at he eats ghosts at,
+               receiving 20 pts per ghost.  The ghosts will turn blue for the duration of the five seconds, 
+               returning to their original color once time is up.
+           
+           3.) DON'T EAT THE POOP! when the game board is initiated, a not-so-delectable treat will be left in 
+               the bottom left corner of the maze. While you must still consume all of the pellets around the
+               poop in order to win the game, you must be careful not to touch the feces themselves. If you do,
+               you will be deducted 20 points, and you will activate blinky's MEGA-BLINKY mode. In keeping with 
+               the official title of our project (Pac-man: Revenge of Blinky), MEGA-BLINKY will be the ultimate 
+               killing machine, able to phase through walls and travel in any direction to hunt down pacman, 
+               using pacman's exact coordinates as his target. Blinky will remain in MEGA-BLINKY mode for seven 
+               seconds. Lucky for you, if you are able to elude MEGA-BLINKY for the entire five seconds and the 
+               time period ends as blinky is phasing through a wall, he will be returned to his starting position.
+           
+           4.) AVOID THE GHOSTS! Pacman starts with three lives, and each run-in with a ghost costs him one of them. 
+               After touching a ghost, pacman and all of the ghosts reset. Once your lives have run out, the game 
+               is over.
+                
+               
+
