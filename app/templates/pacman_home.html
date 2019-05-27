@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pac-man Universe</title>
+        <script src="{{ url_for('static', filename='js/jquery-1.10.2.min.js') }}"></script>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='css/service.css') }}" rel="stylesheet"/>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+        <style>
+            #playgame {
+                position: absolute;
+                font-size: 30pt; 
+                left: 513px; 
+                top: 350px; 
+                height: 100px; 
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body style="background-color: #0000FF">
+        <div class="jumbotron" style="background-color: #0000FF">
+            <h1 class="text-center" style="font-family: 'Nosifer', cursive; color: #FF0000;">Pac-Man: Revenge of Blinky!</h1>
+        </div>
+            <img style="padding-left: 50px" src="{{ url_for('static', filename='images/pacman_large.png') }}" />
+            <a href="{{ url_for('play_game') }}"><button class="btn btn-warning btn-xxl" id="playgame"> Play </button></a>
+            <img style="padding-left: 675px" src="{{ url_for('static', filename='images/blinky_large.png') }}" />
+        </div>
+        <div>
+            <td><a style="padding-left: 520px; font-size: 14pt; color: #FF0000" href="{{ url_for('pacman_history') }}">Learn more about Pac-man!</a></td>
+        </div>
+    </body>
+</html>  

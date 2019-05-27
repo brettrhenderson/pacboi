@@ -43,11 +43,11 @@ var cycles = 0;
 var WIN = 0;
 
 // sound library
-    var chomp = new Audio("sounds/Chomping.wav");
-    var dies = new Audio("sounds/dies.mp3");
-    var start = new Audio("sounds/start.mp3");
-    var eat = new Audio("sounds/eatghost.mp3");
-    var poo = new Audio("sounds/stinky.mp3");
+var chomp = new Audio("../static/sounds/Chomping.wav");
+var dies = new Audio("../static/sounds/dies.mp3");
+var start = new Audio("../static/sounds/start.mp3");
+var eat = new Audio("../static/sounds/eatghost.mp3");
+var poo = new Audio("../static/sounds/stinky.mp3");
 
 //background image
 var bkready = false;
@@ -56,7 +56,7 @@ bkImage.crossOrigin = ' ';
 bkImage.onload = function() {
     bkready = true;
 };
-bkImage.src = "http://i.imgur.com/p0g1b2X.png";
+bkImage.src = "../static/sprites/maze1.png";
 
 
 // Blinky image
@@ -66,7 +66,7 @@ bliImage.crossOrigin = ' ';
 bliImage.onload = function() {
     bliready = true;
     };
-bliImage.src = "http://i.imgur.com/z0jA334.png"
+bliImage.src = "../static/sprites/blinky.png"
 
 // Inky image
 var inkyready = false;
@@ -75,7 +75,7 @@ inkyImage.crossOrigin = ' ';
 inkyImage.onload = function() {
     inkyready = true;
     };
-inkyImage.src = "http://i.imgur.com/1urZ0qm.png"
+inkyImage.src = "../static/sprites/inky.png"
 
 // Pinky image
 var pinkyready = false;
@@ -84,7 +84,7 @@ pinkyImage.crossOrigin = ' ';
 pinkyImage.onload = function() {
     pinkyready = true;
     };
-pinkyImage.src = "http://i.imgur.com/pvi455q.png"
+pinkyImage.src = "../static/sprites/pinky.png"
 
 // Winky image
 var winkyready = false;
@@ -93,7 +93,7 @@ winkyImage.crossOrigin = ' ';
 winkyImage.onload = function() {
     winkyready = true;
     };
-winkyImage.src =  "http://i.imgur.com/VvpcOXf.png"
+winkyImage.src =  "../static/sprites/winky.png"
 
 // Sick ghost image
 var sickready = false;
@@ -102,7 +102,7 @@ sickImage.crossOrigin = ' ';
 sickImage.onload = function() {
     sickready = true;
     };
-sickImage.src = "http://i.imgur.com/vHnXmRc.png"
+sickImage.src = "../static/sprites/sick_ghost.png"
 
 // Stinky image
 var stinkyready = false;
@@ -113,7 +113,7 @@ stinkyImage.onload = function() {
     };
 stinky_x = 24;
 stinky_y = 561;
-stinkyImage.src = "http://i.imgur.com/eDKXotp.png"
+stinkyImage.src = "../static/sprites/stinky.png"
 
 // pacman facing right image
 var pacready = false;
@@ -122,7 +122,7 @@ pacImage.crossOrigin = ' ';
 pacImage.onload = function() {
     pacready = true;
     };
-pacImage.src = " http://i.imgur.com/7pRNY3S.png"
+pacImage.src = " ../static/sprites/pacman_right.png"
 
 //pacman facing left image
 var pacleftready = false;
@@ -131,7 +131,7 @@ pacleftImage.crossOrigin = ' ';
 pacleftImage.onload = function() {
     pacleftready = true;
     };
-pacleftImage.src = "http://i.imgur.com/2uu8Nfb.png"
+pacleftImage.src = "../static/sprites/pacman_left.png"
 
 //pacman facing up image
 var pacupready = false;
@@ -140,7 +140,7 @@ pacupImage.crossOrigin = ' ';
 pacupImage.onload = function() {
     pacupready = true;
     };
-pacupImage.src = "http://i.imgur.com/QAL3Pgw.png"
+pacupImage.src = "../static/sprites/pacman_up.png"
 
 //pacman facing down image
 var pacdownready = false;
@@ -149,7 +149,7 @@ pacdownImage.crossOrigin = ' ';
 pacdownImage.onload = function() {
     pacdownready = true;
     };
-pacdownImage.src = "http://i.imgur.com/v2DLFf3.png"
+pacdownImage.src = "../static/sprites/pacman_down.png"
 
 // pacman closed mouth image
 var paccloseready = false;
@@ -158,7 +158,7 @@ paccloseImage.crossOrigin = ' ';
 paccloseImage.onload = function() {
     paccloseready = true;
     };
-paccloseImage.src = "http://i.imgur.com/QQFH5hH.png"
+paccloseImage.src = "../static/sprites/pacman_closed.png"
 
 //pellet image
 var pellready = false;
@@ -167,7 +167,7 @@ pellImage.crossOrigin = ' ';
 pellImage.onload = function() {
     pellready = true;
     };
-pellImage.src = "http://i.imgur.com/9clnnbe.png";
+pellImage.src = "../static/sprites/pellet.png";
 
 
 //power pellet image
@@ -177,7 +177,7 @@ powerImage.crossOrigin = ' ';
 powerImage.onload = function() {
     powerready = true;
     };
-powerImage.src = "http://i.imgur.com/jLB1oPd.png";
+powerImage.src = "../static/sprites/power_pellet.png";
 
 //game objects
 var pacman = {};

@@ -4,9 +4,9 @@
     <head>
         <title>The Game</title>
         <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <link href="css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+        <script src="{{ url_for('static', filename='js/jquery-1.10.2.min.js') }}"></script>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet"/>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <style>
             #maze {
@@ -69,22 +69,22 @@
             <h1 id="lives">Lives: 3</h1>    
         </div>
         <div id="blinky">
-            <img src="http://i.imgur.com/P4wTDV4.png"></img>
+            <img src="{{ url_for('static', filename='images/blinky_medium.png') }}">
         </div>
         <div id= "inky">
-            <img src="http://i.imgur.com/3p9WOVs.png"></img>
+            <img src="{{ url_for('static', filename='images/inky_medium.png') }}">
         </div>
         <div id="winky">
-            <img src="http://i.imgur.com/AidMcs5.png"></img>
+            <img src="{{ url_for('static', filename='images/clyde_medium.png') }}">
         </div>
         <div id="pinky">
-            <img src="http://i.imgur.com/Be44sRS.png"></img>
+            <img src="{{ url_for('static', filename='images/pinky_medium.png') }}">
         </div>
         <div id="maze">
             <div>
-                <a href="pacman_home.html"><button class="btn btn-danger" id="home"> Home </button></a>
+                <a href="{{ url_for('index') }}"><button class="btn btn-danger" id="home"> Home </button></a>
             </div>
-            <script src="js/game_implementation_2.js"></script>
+            <script src="{{ url_for('static', filename='js/game_implementation_2.js') }}"></script>
         </div>
     </body>
 </html>

@@ -3,8 +3,8 @@
 <html>
    <head>
        <title>History of Pacman</title>
-       <link href="css/bootstrap.min.css" rel="stylesheet"/>
-       <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+       <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+       <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet"/>
        <style>
            #home {
                 position: absolute;
@@ -39,12 +39,12 @@
    </head>
    <body style="background-color: #0000FF">
        <div id="home">
-           <a href="pacman_home.html"><button class="btn btn-danger" id="home"> Home </button></a>
+           <a href="{{ url_for('index') }}"><button class="btn btn-danger" id="home"> Home </button></a>
        </div>
        <div style="background-color: #0000FF">
-           <img style="display: inline-block; padding-left: 400px; padding-top: 25px" src="http://i.imgur.com/N41yxgU.png" />
+           <img style="display: inline-block; padding-left: 400px; padding-top: 25px" src="{{ url_for('static', filename='images/pacman_medium_right.png') }}" />
            <h1 style="font-family: nosifer; display: inline-block; padding-left: 40px; color: #FF0000;">History of Pac-man</h1>
-           <img style="display: inline-block; padding-left: 40px; padding-top: 25px" src="http://i.imgur.com/fq3kNnW.png" />
+           <img style="display: inline-block; padding-left: 40px; padding-top: 25px" src="{{ url_for('static', filename='images/pacman_medium_left.png') }}" />
        </div>
        <div>
            <h3 style="font-family: arial; color: #FFFFFF; padding-left: 60px; padding-right: 60px">
@@ -84,10 +84,10 @@
            </h3>
        </div>
        <div>
-           <img id ="clyde" src="http://i.imgur.com/AidMcs5.png" />
-           <img id ="blinky" src="http://i.imgur.com/P4wTDV4.png" />
-           <img id ="pinky" src="http://i.imgur.com/Be44sRS.png" />
-           <img id ="inky" src="http://i.imgur.com/3p9WOVs.png" />
+           <img id ="clyde" src="{{ url_for('static', filename='images/clyde_medium.png') }}" />
+           <img id ="blinky" src="{{ url_for('static', filename='images/blinky_medium.png') }}" />
+           <img id ="pinky" src="{{ url_for('static', filename='images/pinky_medium.png') }}" />
+           <img id ="inky" src="{{ url_for('static', filename='images/inky_medium.png') }}" />
        </div>
        <div>
            <h3><a style="font-family: arial; position:relative; color: #FFFFFF; padding-left: 60px; padding-right: 60px" 
