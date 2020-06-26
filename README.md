@@ -25,7 +25,7 @@ and deployed it on my [pythonanywhere](http://bhenderson.pythonanywhere.com/) si
 
 The [Documentation.txt](Documentation.txt) and [Design.txt](Design.txt) files were original
 requirements for project submission. The Documentation file specifically has some useful info
-about how to play the game and how the sprites move around. 
+about how to play the game, while Design talks about how the sprites are programmed to move.
 
 ## Installation
 If you would like to run the game on your laptop or play around with the code, the
