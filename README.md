@@ -1,9 +1,7 @@
 # Pacman: Revenge of Blinky
-<div style="text-align:center">
-    <span>
-        <img src="app/static/images/logo.png" />
-    </span>
-</div>
+<p align="center">
+    <img src="app/static/images/logo.png" width=400/>
+</p>
 This game originally comprised my final project for Computer Science 50, which was 
 an introductory CS class at Harvard College and my first exposure to computer 
 programming. It was completed as a group project alongside Nikolas Cable and Andrew
