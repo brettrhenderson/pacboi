@@ -23,6 +23,10 @@ Though the original game was just a collection of HTML pages and JS scripts, I h
 since wrapped it up as a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app
 and deployed it on my [pythonanywhere](http://bhenderson.pythonanywhere.com/) site.  
 
+The [Documentation.txt](Documentation.txt) and [Design.txt](Design.txt) files were original
+requirements for project submission. The Documentation file specifically has some useful info
+about how to play the game and how the sprites move around. 
+
 ## Installation
 If you would like to run the game on your laptop or play around with the code, the
 easiest way is to clone or fork this repository.
