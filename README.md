@@ -19,9 +19,7 @@ development.  While the final product is pretty basic, it is always fun to look 
 at it and see how far we've come.  
 
 ## Playing the Game
-Though the original game was just a collection of HTML pages and JS scripts, I have 
-since wrapped it up as a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app
-and deployed it on my [pythonanywhere](http://bhenderson.pythonanywhere.com/) site.  
+The original game (with all of its ugly CSS styling) can be played at my projects [site](https://brettrhenderson.github.io/pacboi/pacman_home.html).  
 
 The [Documentation.txt](Documentation.txt) and [Design.txt](Design.txt) files were original
 requirements for project submission. The Documentation file specifically has some useful info
